@@ -200,8 +200,14 @@ address{font-style:normal}
 .foot img{width:130px;height:auto}
 .foot nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:8px}
 .foot nav a{font-weight:800;padding-block:6px}
-.credit{flex-basis:100%;text-align:center;font-size:.9rem}
-.credit a{display:inline-block;padding-block:10px;font-weight:800}
+.credit{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 12px;padding-top:14px;border-top:1px solid var(--lilas);font-size:.9rem}
+.dev{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;transition:transform .25s var(--mola)}
+.dev b{padding:6px 10px;border:1.5px solid #0A0E1E;font:800 .82rem/1.2 var(--body);letter-spacing:.05em;transition:background .2s,color .2s}
+.dev b:first-child{border-radius:8px 0 0 8px;background:#CBD5F0;color:#0A0E1E}
+.dev b:last-child{border-radius:0 8px 8px 0;background:#0A0E1E;color:#fff}
+.dev:hover{transform:translateY(-2px)}
+.dev:hover b:first-child{background:#0A0E1E;color:#fff}
+.dev:hover b:last-child{background:#CBD5F0;color:#0A0E1E}
 
 /* whatsapp e barra do celular */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:45;width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:#128C4B;fill:#fff;box-shadow:0 10px 24px rgba(18,140,75,.4);transition:transform .25s var(--mola)}
