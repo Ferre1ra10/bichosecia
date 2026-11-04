@@ -200,14 +200,25 @@ address{font-style:normal}
 .foot img{width:130px;height:auto}
 .foot nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:8px}
 .foot nav a{font-weight:800;padding-block:6px}
-.credit{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 12px;padding-top:14px;border-top:1px solid var(--lilas);font-size:.9rem}
-.dev{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;transition:transform .25s var(--mola)}
-.dev b{padding:6px 10px;border:1.5px solid #0A0E1E;font:800 .82rem/1.2 var(--body);letter-spacing:.05em;transition:background .2s,color .2s}
-.dev b:first-child{border-radius:8px 0 0 8px;background:#CBD5F0;color:#0A0E1E}
-.dev b:last-child{border-radius:0 8px 8px 0;background:#0A0E1E;color:#fff}
-.dev:hover{transform:translateY(-2px)}
-.dev:hover b:first-child{background:#0A0E1E;color:#fff}
-.dev:hover b:last-child{background:#CBD5F0;color:#0A0E1E}
+.devbar{background:#0A0E1E;color:#AEB7CF}
+.devbar a{max-width:1180px;margin-inline:auto;padding:26px clamp(20px,5vw,48px);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px 40px;color:inherit;text-decoration:none}
+.dev-brand{display:grid;gap:8px;justify-items:start}
+.dev-brand small{font-size:.78rem;font-weight:600;letter-spacing:.02em}
+.dev-logo{display:inline-flex}
+.dev-logo b{padding:7px 12px;border:1.5px solid #CBD5F0;font:800 .95rem/1.2 var(--body);letter-spacing:.05em}
+.dev-logo b:first-child{border-radius:8px 0 0 8px;background:#CBD5F0;color:#0A0E1E}
+.dev-logo b:last-child{border-radius:0 8px 8px 0;color:#fff}
+.dev-text{padding-left:40px;border-left:1px solid #2A3047;font-size:.95rem;line-height:1.5}
+.dev-text strong{display:block;color:#fff;font-size:1.05rem;font-weight:800}
+.dev-go{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 18px;border:1.5px solid #CBD5F0;border-radius:999px;color:#fff;font-size:.92rem;font-weight:800;white-space:nowrap;transition:background .2s,color .2s}
+.dev-go svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--mola)}
+.devbar a:hover .dev-go{background:#CBD5F0;color:#0A0E1E}
+.devbar a:hover .dev-go svg{transform:translateX(4px)}
+@media (max-width:900px){
+  .devbar a{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:16px;padding-block:28px}
+  .dev-brand{justify-items:center}
+  .dev-text{padding-left:0;border-left:0}
+}
 
 /* whatsapp e barra do celular */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:45;width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:#128C4B;fill:#fff;box-shadow:0 10px 24px rgba(18,140,75,.4);transition:transform .25s var(--mola)}
