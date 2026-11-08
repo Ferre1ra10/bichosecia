@@ -183,9 +183,9 @@ const slides = $$('main>section');
 const padTopo = () => parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
 function encaixa() {
   const desktop = innerWidth > 900, util = innerHeight - padTopo();
-  const hero = $('.hero'), faixa = $('.ticker');
+  const hero = $('.hero'), faixa = $('.ticker'), atalhos = $('.quick');
   hero.style.height = hero.style.minHeight = '';
-  if (desktop) { hero.style.minHeight = '0'; hero.style.height = Math.max(480, innerHeight - hero.offsetTop - faixa.offsetHeight) + 'px'; }
+  if (desktop) { hero.style.minHeight = '0'; hero.style.height = Math.max(480, innerHeight - hero.offsetTop - faixa.offsetHeight - atalhos.offsetHeight) + 'px'; }
   slides.forEach(sec => {
     const w = sec.querySelector(':scope > .wrap');
     if (!w || sec === hero) return;
