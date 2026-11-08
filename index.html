@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=Varela+Round&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp">
-<link rel="stylesheet" href="assets/css/style.css?v=18">
+<link rel="stylesheet" href="assets/css/style.css?v=22">
 <script>
 // abertura com a logo em todo carregamento
 document.documentElement.classList.add('js', 'intro-on');
@@ -257,9 +257,14 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
         <div class="money-in"><span aria-hidden="true">R$</span><input id="valor" type="text" inputmode="numeric" autocomplete="off" aria-describedby="valor-err"></div>
         <small id="valor-err" class="err" hidden>Digite um valor maior que zero.</small>
       </div>
-      <img class="pix-photo" src="assets/img/golden.webp" alt="Cachorro golden sorrindo" width="900" height="600" loading="lazy">
+      <ol class="pix-steps">
+        <li><b>1</b><span>Escolha o valor</span></li>
+        <li><b>2</b><span>Abra o app do seu banco</span></li>
+        <li><b>3</b><span>Aponte a câmera e pague</span></li>
+      </ol>
     </div>
     <div class="pix-card rv" data-fx="zoom" aria-live="polite">
+      <img class="pix-photo" src="assets/img/golden.webp" alt="Cachorro golden sorrindo" width="900" height="600" loading="lazy">
       <canvas id="qr" width="600" height="600" role="img" aria-label="QR Code Pix"></canvas>
       <strong id="pix-total">R$ 100,00</strong>
       <span class="muted">Para Bichos &amp; Cia · Chave <span class="nb">(61) 99504-5476</span></span>
@@ -284,11 +289,11 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
         <strong>Seu pet foi bem cuidado? Conte no Google</strong>
         <span class="more">Avaliar a clínica<svg class="i" aria-hidden="true"><use href="#arrow"/></svg></span>
       </a>
-      <a class="sc sc-ig rv" data-fx="right" href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">
-        <img class="sc-photo" src="assets/img/dogcat.webp" alt="" width="525" height="350" loading="lazy">
+      <div class="sc sc-ig rv" data-fx="right">
         <strong>Acompanhe o dia a dia no Instagram</strong>
-        <span class="more">@clinicavet_bichosecia<svg class="i" aria-hidden="true"><use href="#arrow"/></svg></span>
-      </a>
+        <iframe class="ig-embed" title="Publicações do Instagram da Clínica Bichos e Cia" src="https://www.instagram.com/clinicavet_bichosecia/embed" loading="lazy" scrolling="no" allowtransparency="true" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <a class="more" href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">Abrir @clinicavet_bichosecia<svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
@@ -357,7 +362,6 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
   </div>
   <div class="foot-base"><div class="wrap foot-base-in">
     <span>© 2026 Clínica Veterinária Bichos &amp; Cia</span>
-    <a class="credit" href="https://heisuscode.dev" target="_blank" rel="noopener"><b>HEISUS|CODE</b><span>Site feito pela empresa de desenvolvimento web</span><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
   </div></div>
 </footer>
 
