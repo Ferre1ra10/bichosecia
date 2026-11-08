@@ -1,4 +1,4 @@
-:root{
+:root{color-scheme:only light;
   --roxo:#68257B; --roxo-esc:#4C1A5B; --teal:#0FB4B8; --teal-esc:#0A7A7D;
   --sol:#FFC94D; --lilas:#F3E9F6; --nevoa:#FBF7FC; --tinta:#2B1636; --texto2:#5A4563;
   --display:'Grandstander','Trebuchet MS',sans-serif; --body:'Nunito',system-ui,sans-serif;
@@ -284,3 +284,72 @@ address{font-style:normal}
   .ticker-track{flex-wrap:wrap;width:auto;justify-content:center;gap:10px 30px}
 }
 .nb{white-space:nowrap}
+
+/* ===== abertura com a logo ===== */
+.intro{display:none}
+.intro-on .intro{display:grid;place-items:center;position:fixed;inset:0;z-index:500;background:var(--nevoa);pointer-events:none;animation:intro-out 1200ms cubic-bezier(.7,0,.3,1) both}
+.intro img{width:min(46vw,300px);height:auto;animation:intro-logo 1200ms cubic-bezier(.2,.7,.2,1) both}
+@keyframes intro-out{0%,55%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes intro-logo{0%{opacity:0;transform:scale(.85)}30%,60%{opacity:1;transform:none}100%{opacity:0;transform:scale(1.06)}}
+.intro-on .hero-text>*{animation-delay:.85s}
+.intro-on .hero-text>:nth-child(2){animation-delay:.95s}
+.intro-on .hero-text>:nth-child(3){animation-delay:1.05s}
+.intro-on .hero-text>:nth-child(4){animation-delay:1.15s}
+
+/* ===== secoes que ganharam um .wrap interno ===== */
+.sec-pix,.faq-sec{background:#fff}
+.sec-clinica .split{padding-block:clamp(64px,8vw,104px) 40px}
+
+/* ===== faixa de destaque ===== */
+.big{position:relative;overflow:hidden;background:var(--roxo-esc);color:#fff;text-align:center;padding-block:clamp(64px,8vw,110px)}
+.big::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 22%,rgba(15,180,184,.38),transparent 45%),radial-gradient(circle at 84% 78%,rgba(255,201,77,.32),transparent 45%)}
+.big-in{position:relative;display:grid;gap:clamp(14px,3vh,34px)}
+.big-top,.big-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 30px;align-items:baseline;font:800 clamp(15px,1.5vw,20px) var(--body);letter-spacing:.1em;text-transform:uppercase;color:#EADFF0}
+.big-top b{font:800 clamp(38px,4.6vw,64px)/1 var(--display);color:var(--sol);margin-right:10px;letter-spacing:0}
+.big-word{font:800 clamp(64px,9.5vw,170px)/.95 var(--display);margin:0;white-space:nowrap}
+.big-word span{color:var(--sol)}
+.big-bot span{display:inline-flex;align-items:center;gap:10px}
+.big-bot span::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--teal)}
+
+/* ===== como funciona ===== */
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;align-items:center;gap:14px;font-weight:800;font-size:1.05rem}
+.steps li::before{content:counter(s);width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:50%;background:var(--sol);color:var(--tinta);font:800 1.25rem var(--display);transition:transform .3s var(--mola)}
+.steps li:hover::before{transform:scale(1.12) rotate(-8deg)}
+
+/* ===== duvidas ===== */
+.faq-sec{padding-block:clamp(64px,7vw,96px)}
+.faq-in{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:start}
+.faq-in>div:first-child{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.faq-list{display:grid;gap:12px}
+.faq-list details{background:var(--nevoa);border-radius:20px;padding:4px 22px;transition:background .2s,transform .25s var(--mola)}
+.faq-list details:hover{transform:translateX(4px)}
+.faq-list details[open]{background:var(--lilas)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:62px;font:700 1.15rem/1.25 var(--display)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--roxo);color:#fff;font:800 1.3rem/1 var(--body);transition:transform .25s var(--mola)}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list details p{padding:0 0 18px;color:var(--texto2)}
+
+/* ===== mais animacoes ao passar o mouse ===== */
+.panel img{transition:transform .5s var(--mola)}
+.panel img:hover{transform:scale(1.03) rotate(1deg)}
+.map{transition:transform .3s var(--mola),box-shadow .3s}
+.map:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(104,37,123,.2)}
+.pix-card{transition:transform .3s var(--mola)}
+.pix-card:hover{transform:translateY(-4px)}
+
+/* ===== slides no PC: cada secao ocupa a tela, conteudo centralizado (encaixe em main.js) ===== */
+@media (min-width:901px){
+  main>section:not(.hero){min-height:calc(100svh - var(--top));display:flex;flex-direction:column;justify-content:center;padding-block:clamp(16px,3vh,40px)}
+  .sec-clinica .split,.pillars,.offers,.pix,.local{padding-block:0}
+  .sec-clinica .split{margin-bottom:clamp(20px,3vh,40px)}
+}
+/* celular: rolagem livre com encaixe leve no comeco de cada secao */
+@media (max-width:900px){
+  html{scroll-snap-type:y proximity}
+  main>section{scroll-snap-align:start}
+  .faq-in{grid-template-columns:minmax(0,1fr)}
+  .big-top,.big-bot{justify-content:center}
+  .big-word{font-size:clamp(44px,13vw,80px)}
+}

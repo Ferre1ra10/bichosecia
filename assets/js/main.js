@@ -175,3 +175,57 @@ copy.addEventListener('click', async () => {
 });
 
 setAmount(10000);
+
+// ---------- slides ----------
+// PC: cada secao ocupa a tela e o conteudo cresce ou diminui (66% a 150%) ate preencher a altura,
+// sem passar da largura; a primeira tela (foto + faixa) cabe inteira. Celular fica no tamanho natural.
+const slides = $$('main>section');
+const padTopo = () => parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+function encaixa() {
+  const desktop = innerWidth > 900, util = innerHeight - padTopo();
+  const hero = $('.hero'), faixa = $('.ticker');
+  hero.style.height = hero.style.minHeight = '';
+  if (desktop) { hero.style.minHeight = '0'; hero.style.height = Math.max(480, innerHeight - hero.offsetTop - faixa.offsetHeight) + 'px'; }
+  slides.forEach(sec => {
+    const w = sec.querySelector(':scope > .wrap');
+    if (!w || sec === hero) return;
+    w.style.zoom = '';
+    if (!desktop) return;
+    sec.style.minHeight = '0';
+    const extra = sec.offsetHeight - w.offsetHeight;
+    sec.style.minHeight = '';
+    const z = Math.min((util - extra) / w.offsetHeight, (innerWidth * 0.96) / w.offsetWidth);
+    w.style.zoom = Math.min(1.5, Math.max(0.66, z)).toFixed(3);
+  });
+}
+encaixa();
+addEventListener('load', encaixa);
+document.fonts?.ready.then(encaixa);
+let tEncaixa; addEventListener('resize', () => { clearTimeout(tEncaixa); tEncaixa = setTimeout(encaixa, 150); });
+$$('[role=tab]').forEach(t => t.addEventListener('click', () => requestAnimationFrame(encaixa))); // abas mudam a altura
+
+// PC: um gesto da roda = um slide (eventos seguidos do trackpad contam como o mesmo gesto)
+if (matchMedia('(pointer:fine)').matches) {
+  const alvoDe = el => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    if (el === slides[0]) return 0;
+    const p = padTopo(), vh = innerHeight - p, alt = el.offsetHeight;
+    const topo = el.getBoundingClientRect().top + scrollY - p;
+    return Math.round(Math.min(max, Math.max(0, alt < vh ? topo - (vh - alt) / 2 : topo)));
+  };
+  const alvos = () => [...slides.map(alvoDe), document.documentElement.scrollHeight - innerHeight];
+  let animando = false, ultimo = 0, tFim;
+  const fim = () => { animando = false; clearTimeout(tFim); };
+  addEventListener('scrollend', fim);
+  const vaiPara = y => { animando = true; scrollTo({ top: y, behavior: calm ? 'auto' : 'smooth' }); clearTimeout(tFim); tFim = setTimeout(fim, 1000); };
+  addEventListener('wheel', e => {
+    if (e.ctrlKey || Math.abs(e.deltaY) < Math.abs(e.deltaX) || menu.classList.contains('open')) return;
+    e.preventDefault();
+    const agora = performance.now(), novo = agora - ultimo > 220;
+    ultimo = agora;
+    if (animando || !novo || Math.abs(e.deltaY) < 2) return;
+    const y = scrollY, lista = alvos();
+    const alvo = e.deltaY > 0 ? lista.find(a => a > y + 4) : [...lista].reverse().find(a => a < y - 4);
+    if (alvo !== undefined) vaiPara(alvo);
+  }, { passive: false });
+}
