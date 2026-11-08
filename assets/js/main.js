@@ -161,3 +161,15 @@ if (!calm && matchMedia('(pointer: fine)').matches) {
     document.body.append(paw);
   });
 }
+
+// inclinacao suave dos cartoes com o mouse (so com mouse e sem preferencia de menos movimento)
+if (!calm && matchMedia('(hover:hover)').matches) {
+  document.querySelectorAll('.group,.feat-sm,.sc,.pix-card').forEach(el => {
+    el.addEventListener('pointermove', e => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      el.style.transform = `perspective(800px) rotateX(${(-y * 5).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-4px)`;
+    });
+    el.addEventListener('pointerleave', () => (el.style.transform = ''));
+  });
+}
