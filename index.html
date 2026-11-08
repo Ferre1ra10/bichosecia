@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=Varela+Round&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp">
-<link rel="stylesheet" href="assets/css/style.css?v=10">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 <script>
 // abertura com a logo em todo carregamento
 document.documentElement.classList.add('js', 'intro-on');
@@ -99,8 +99,8 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 </section>
 
 <div class="ticker" aria-hidden="true"><div class="ticker-track">
-  <span>Hospitalização</span><span>Castração</span><span>Cirurgias</span><span>Laboratório</span><span>Raios-X</span><span>Emergência</span><span>Testes veterinários</span><span>Vacina</span><span>Táxi Dog</span><span>Atendimento domiciliar</span>
-  <span>Hospitalização</span><span>Castração</span><span>Cirurgias</span><span>Laboratório</span><span>Raios-X</span><span>Emergência</span><span>Testes veterinários</span><span>Vacina</span><span>Táxi Dog</span><span>Atendimento domiciliar</span>
+  <span>Castração</span><span>Cirurgias</span><span>Laboratório</span><span>Raios-X</span><span>Emergência</span><span>Testes veterinários</span><span>Vacina</span><span>Táxi Dog</span><span>Atendimento domiciliar</span>
+  <span>Castração</span><span>Cirurgias</span><span>Laboratório</span><span>Raios-X</span><span>Emergência</span><span>Testes veterinários</span><span>Vacina</span><span>Táxi Dog</span><span>Atendimento domiciliar</span>
 </div></div>
 
 <nav class="quick" aria-label="Contato rápido">
@@ -136,7 +136,6 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
         <div class="g-top"><svg class="i" aria-hidden="true"><use href="#pulse"/></svg><h3>Cirurgia e cuidados</h3></div>
         <a class="svc" href="#" data-wa="Olá! Quero agendar uma castração."><img src="assets/img/castracao.webp" alt="" width="900" height="1350" loading="lazy"><span>Castração</span><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
         <a class="svc" href="#" data-wa="Olá! Gostaria de informações sobre cirurgias."><img src="assets/img/cirurgia.webp" alt="" width="900" height="1350" loading="lazy"><span>Cirurgias</span><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
-        <a class="svc" href="#" data-wa="Olá! Gostaria de informações sobre hospitalização."><img src="assets/img/hospital.webp" alt="" width="900" height="600" loading="lazy"><span>Hospitalização</span><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
         <a class="svc svc-urg" href="#" data-wa="Olá! Preciso de atendimento de emergência."><img src="assets/img/emergencia.webp" alt="" width="900" height="1350" loading="lazy"><span>Emergência</span><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
       </article>
     </div>
@@ -310,25 +309,49 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 </main>
 
 <footer class="foot">
-  <div class="wrap foot-in">
-    <div>
-      <p class="foot-name">Bichos &amp; Cia</p>
-      <p>Clínica veterinária em Valparaíso de Goiás, do check-up à cirurgia.</p>
+  <div class="wrap">
+    <div class="foot-cta">
+      <div><h2>Seu pet merece cuidado hoje</h2><p>Fale com a equipe pelo WhatsApp ou ligue. Emergências também.</p></div>
+      <div class="foot-acts">
+        <a class="btn btn-wa" href="#" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica."><svg class="i" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+        <a class="btn btn-ghost-w" href="tel:+556136246060"><svg class="i" aria-hidden="true"><use href="#phone"/></svg>(61) 3624-6060</a>
+      </div>
     </div>
-    <div>
-      <h3>Contato</h3>
-      <p><a href="#" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica.">WhatsApp</a></p>
-      <p><a href="tel:+556136246060">(61) 3624-6060</a></p>
-      <p><a href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></p>
-      <p><a href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">@clinicavet_bichosecia</a></p>
-    </div>
-    <div>
-      <h3>Endereço</h3>
-      <p>R. Aumerson M. São Pessoa, Qd 116, Lt 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO</p>
-      <p><a href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener">Como chegar</a></p>
+    <div class="foot-in">
+      <div class="foot-brand">
+        <p class="foot-name">Bichos &amp; Cia</p>
+        <p>Clínica veterinária em Valparaíso de Goiás, do check-up à cirurgia.</p>
+        <div class="foot-soc">
+          <a href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener" aria-label="Instagram da clínica"><svg class="i" aria-hidden="true"><use href="#ig"/></svg></a>
+          <a href="#" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica." aria-label="WhatsApp da clínica"><svg class="i" aria-hidden="true"><use href="#wa"/></svg></a>
+          <a href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener" aria-label="Como chegar"><svg class="i" aria-hidden="true"><use href="#pin"/></svg></a>
+        </div>
+      </div>
+      <nav aria-label="Rodapé">
+        <h3>Navegue</h3>
+        <ul><li><a href="#servicos">Serviços</a></li><li><a href="#local">Onde estamos</a></li><li><a href="#agendar">Agendar</a></li><li><a href="#pix">Pix</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+      </nav>
+      <div>
+        <h3>Contato</h3>
+        <ul class="ico-list">
+          <li><svg class="i" aria-hidden="true"><use href="#phone"/></svg><a href="tel:+556136246060">(61) 3624-6060</a></li>
+          <li><svg class="i" aria-hidden="true"><use href="#ig"/></svg><a href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">@clinicavet_bichosecia</a></li>
+          <li><svg class="i" aria-hidden="true"><use href="#arrow"/></svg><a href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <ul class="ico-list">
+          <li><svg class="i" aria-hidden="true"><use href="#pin"/></svg><span>R. Aumerson M. São Pessoa, Qd 116, Lt 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO</span></li>
+        </ul>
+        <a class="more more-w" href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener">Como chegar<svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
     </div>
   </div>
-  <div class="wrap foot-base"><span>© 2026 Clínica Veterinária Bichos &amp; Cia</span><span>Valparaíso de Goiás, GO</span></div>
+  <div class="foot-base"><div class="wrap foot-base-in">
+    <span>© 2026 Clínica Veterinária Bichos &amp; Cia</span>
+    <a class="credit" href="https://heisuscode.dev" target="_blank" rel="noopener"><b>HEISUS|CODE</b><span>Site feito pela empresa de desenvolvimento web</span><svg class="i" aria-hidden="true"><use href="#arrow"/></svg></a>
+  </div></div>
 </footer>
 
 <nav class="dock" aria-label="Ações rápidas">
