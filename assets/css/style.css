@@ -200,32 +200,8 @@ address{font-style:normal}
 .foot img{width:130px;height:auto}
 .foot nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:8px}
 .foot nav a{font-weight:800;padding-block:6px}
-.devbar{background:#0A0E1E;color:#AEB7CF}
-.devbar a{max-width:1180px;margin-inline:auto;padding:26px clamp(20px,5vw,48px);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px 40px;color:inherit;text-decoration:none}
-.dev-brand{display:grid;gap:8px;justify-items:start}
-.dev-brand small{font-size:.78rem;font-weight:600;letter-spacing:.02em}
-.dev-logo{display:inline-flex}
-.dev-logo b{padding:7px 12px;border:1.5px solid #CBD5F0;font:800 .95rem/1.2 var(--body);letter-spacing:.05em}
-.dev-logo b:first-child{border-radius:8px 0 0 8px;background:#CBD5F0;color:#0A0E1E}
-.dev-logo b:last-child{border-radius:0 8px 8px 0;color:#fff}
-.dev-text{padding-left:40px;border-left:1px solid #2A3047;font-size:.95rem;line-height:1.5}
-.dev-text strong{display:block;color:#fff;font-size:1.05rem;font-weight:800}
-.dev-go{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 18px;border:1.5px solid #CBD5F0;border-radius:999px;color:#fff;font-size:.92rem;font-weight:800;white-space:nowrap;transition:background .2s,color .2s}
-.dev-go svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--mola)}
-.devbar a:hover .dev-go{background:#CBD5F0;color:#0A0E1E}
-.devbar a:hover .dev-go svg{transform:translateX(4px)}
-@media (max-width:900px){
-  .devbar a{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:16px;padding-block:28px}
-  .dev-brand{justify-items:center}
-  .dev-text{padding-left:0;border-left:0}
-}
 
-/* whatsapp e barra do celular */
-.wa-float{position:fixed;right:22px;bottom:22px;z-index:45;width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:#128C4B;fill:#fff;box-shadow:0 10px 24px rgba(18,140,75,.4);transition:transform .25s var(--mola)}
-.wa-float svg{width:34px;height:34px}
-.wa-float:hover{transform:scale(1.1)}
-.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#128C4B;z-index:-1;animation:ping 2.400s ease-out infinite}
-@keyframes ping{to{transform:scale(1.7);opacity:0}}
+/* barra do celular */
 .dock{display:none}
 
 /* aparecer ao rolar: só com JS, sem JS tudo fica visível */
@@ -264,8 +240,7 @@ address{font-style:normal}
   .tabs button{flex:none;scroll-snap-align:center}
   .money{max-width:none}
   .pix-card{order:1}
-  .wa-float{display:none}
-  .dock{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;box-shadow:0 -6px 20px rgba(104,37,123,.14);padding-bottom:env(safe-area-inset-bottom)}
+    .dock{position:fixed;left:0;right:0;bottom:0;z-index:45;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;box-shadow:0 -6px 20px rgba(104,37,123,.14);padding-bottom:env(safe-area-inset-bottom)}
   .dock a{min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--roxo);font-weight:800;font-size:.78rem;text-decoration:none}
   .dock a:first-child{color:#0E7A40}
   .dock svg{width:24px;height:24px;fill:currentColor}
@@ -302,7 +277,9 @@ address{font-style:normal}
 
 /* ===== faixa de destaque ===== */
 .big{position:relative;overflow:hidden;background:var(--roxo-esc);color:#fff;text-align:center;padding-block:clamp(64px,8vw,110px)}
-.big::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 22%,rgba(15,180,184,.38),transparent 45%),radial-gradient(circle at 84% 78%,rgba(255,201,77,.32),transparent 45%)}
+.big-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.big::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(43,22,54,.72)} /* pelicula para o texto ficar legivel sobre a foto */
+.big-in{z-index:2}
 .big-in{position:relative;display:grid;gap:clamp(14px,3vh,34px)}
 .big-top,.big-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 30px;align-items:baseline;font:800 clamp(15px,1.5vw,20px) var(--body);letter-spacing:.1em;text-transform:uppercase;color:#EADFF0}
 .big-top b{font:800 clamp(38px,4.6vw,64px)/1 var(--display);color:var(--sol);margin-right:10px;letter-spacing:0}
