@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp">
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 <script>
 // abertura com a logo em todo carregamento
 document.documentElement.classList.add('js', 'intro-on');
@@ -95,85 +95,99 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
   </nav>
 </div>
 
-<section class="sec-clinica" id="clinica">
+<section class="sec-servicos" id="servicos">
   <div class="wrap">
-  <div class="split">
-  <div class="reveal">
-    <p class="eyebrow">Conheça a clínica</p>
-    <h2>Carinho de família com estrutura completa</h2>
-    <p>Da vacina à hospitalização, tudo acontece no mesmo lugar: exames, cirurgias e acompanhamento, sem você precisar correr de um endereço para outro.</p>
-    <a class="btn btn-teal" href="#servicos">Ver todos os serviços</a>
-  </div>
-  <div class="love reveal">
-    <img src="assets/img/love.webp" alt="Tutora beijando seu cachorro no colo" width="1200" height="800" loading="lazy">
-    <span class="float f-1" aria-hidden="true"><svg><use href="#i-paw"/></svg></span>
-    <span class="float f-2" aria-hidden="true"><svg><use href="#i-bone"/></svg></span>
-    <span class="float f-3" aria-hidden="true"><svg><use href="#i-heart"/></svg></span>
-  </div>
-</div>
-  <div class="pillars">
-  <article class="pillar reveal"><svg class="p-ico" aria-hidden="true"><use href="#i-heart"/></svg><h3>Todas as especialidades</h3><p>Atendimento completo para o seu pet em um só lugar.</p></article>
-  <article class="pillar reveal"><svg class="p-ico" aria-hidden="true"><use href="#i-paw"/></svg><h3>Laboratório próprio</h3><p>Resultados em minutos e testes rápidos na clínica.</p></article>
-  <article class="pillar reveal"><svg class="p-ico" aria-hidden="true"><use href="#i-star"/></svg><h3>Serviço de emergência</h3><p>Aconteceu um imprevisto? Ligue para a clínica.</p><a class="btn btn-teal" href="tel:+556136246060"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Ligar (61) 3624-6060</a></article>
-</div>
+    <div class="sec-head reveal">
+      <p class="tag">Serviços</p>
+      <h2>Tudo que o seu <em>pet</em> precisa</h2>
+      <p class="sec-p">Toque em um serviço e fale com a equipe pelo WhatsApp, com a mensagem já pronta.</p>
+    </div>
+    <div class="svc-grid">
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de informações sobre hospitalização."><img src="assets/img/hospital.webp" alt="Cachorro descansando coberto por uma manta" width="900" height="600" loading="lazy"><span class="svc-n">01</span><h3>Hospitalização</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Quero agendar uma castração."><img src="assets/img/castracao.webp" alt="Veterinário examinando um dachshund" width="900" height="1350" loading="lazy"><span class="svc-n">02</span><h3>Castração</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de informações sobre cirurgias."><img src="assets/img/cirurgia.webp" alt="Veterinário com lupas examinando um cachorro" width="900" height="1350" loading="lazy"><span class="svc-n">03</span><h3>Cirurgias</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de informações sobre exames de laboratório."><img src="assets/img/lab.webp" alt="Profissional usando microscópio em laboratório" width="900" height="600" loading="lazy"><span class="svc-n">04</span><h3>Laboratório</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de agendar um raio-X."><img src="assets/img/raiox.webp" alt="Cachorro sendo examinado em mesa clínica" width="900" height="1350" loading="lazy"><span class="svc-n">05</span><h3>Raios-X</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Preciso de atendimento de emergência."><img src="assets/img/emergencia.webp" alt="Gato branco sendo examinado por veterinário" width="900" height="1350" loading="lazy"><span class="svc-n">06</span><h3>Emergência</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de informações sobre testes veterinários."><img src="assets/img/testes.webp" alt="Veterinária coletando material da pata de um cachorro" width="900" height="1350" loading="lazy"><span class="svc-n">07</span><h3>Testes veterinários</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de agendar uma vacina."><img src="assets/img/vacina.webp" alt="Beagle ao lado de uma seringa de vacina" width="1600" height="900" loading="lazy"><span class="svc-n">08</span><h3>Vacina</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de agendar o Táxi Dog."><img src="assets/img/taxi.webp" alt="Beagle com a cabeça para fora da janela do carro" width="900" height="600" loading="lazy"><span class="svc-n">09</span><h3>Táxi Dog</h3><span class="svc-go">Falar no WhatsApp</span></a>
+      <a class="svc reveal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Gostaria de agendar uma consulta com atendimento domiciliar."><img src="assets/img/domiciliar.webp" alt="Lulu da Pomerânia no colo do tutor" width="900" height="1350" loading="lazy"><span class="svc-n">10</span><h3>Consulta domiciliar</h3><span class="svc-go">Falar no WhatsApp</span></a>
+    </div>
   </div>
 </section>
 
-<section class="services" id="servicos">
-  <div class="wrap">
-    <div class="center reveal">
-      <h2>Tudo o que seu pet precisa</h2>
-      <p>Toque em um serviço para falar com a equipe pelo WhatsApp.</p>
+<section class="sec-clinica" id="clinica">
+  <div class="wrap clin">
+    <div class="clin-photo reveal">
+      <img src="assets/img/love.webp" alt="Tutora beijando seu cachorro no colo" width="1200" height="800" loading="lazy">
+      <span class="float f-1" aria-hidden="true"><svg><use href="#i-paw"/></svg></span>
+      <span class="float f-2" aria-hidden="true"><svg><use href="#i-bone"/></svg></span>
+      <span class="clin-chip">Bichos &amp; Cia</span>
     </div>
-    <div class="grid">
-      <a class="card reveal" data-wa="Olá! Gostaria de informações sobre hospitalização." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/hospital.webp" alt="Cachorro descansando coberto por uma manta" width="900" height="600" loading="lazy"><span>Hospitalização</span></a>
-      <a class="card reveal" data-wa="Olá! Quero agendar uma castração." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/castracao.webp" alt="Veterinário examinando um dachshund" width="900" height="1350" loading="lazy"><span>Castração</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de informações sobre cirurgias." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/cirurgia.webp" alt="Veterinário com lupas examinando um cachorro" width="900" height="1350" loading="lazy"><span>Cirurgias</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de informações sobre exames de laboratório." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/lab.webp" alt="Profissional usando microscópio em laboratório" width="900" height="600" loading="lazy"><span>Laboratório</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de agendar um raio-X." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/raiox.webp" alt="Cachorro sendo examinado em mesa clínica" width="900" height="1350" loading="lazy"><span>Raios-X</span></a>
-      <a class="card reveal" data-wa="Olá! Preciso de atendimento de emergência." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/emergencia.webp" alt="Gato branco sendo examinado por veterinário" width="900" height="1350" loading="lazy"><span>Emergência</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de informações sobre testes veterinários." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/testes.webp" alt="Veterinária coletando material da pata de um cachorro" width="900" height="1350" loading="lazy"><span>Testes veterinários</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de agendar uma vacina." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/vacina.webp" alt="Beagle ao lado de uma seringa de vacina" width="1600" height="900" loading="lazy"><span>Vacina</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de agendar o Táxi Dog." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/taxi.webp" alt="Beagle com a cabeça para fora da janela do carro" width="900" height="600" loading="lazy"><span>Táxi Dog</span></a>
-      <a class="card reveal" data-wa="Olá! Gostaria de agendar uma consulta com atendimento domiciliar." href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener"><img src="assets/img/domiciliar.webp" alt="Lulu da Pomerânia no colo do tutor" width="900" height="1350" loading="lazy"><span>Consulta domiciliar</span></a>
+    <div>
+      <p class="tag reveal">Conheça a clínica</p>
+      <h2 class="reveal">Carinho de família, <em>estrutura completa</em></h2>
+      <p class="sec-p reveal">Da vacina à hospitalização, tudo acontece no mesmo lugar: exames, cirurgias e acompanhamento, sem você precisar correr de um endereço para outro.</p>
+      <ol class="num-list">
+        <li class="reveal"><div><h3>Todas as especialidades</h3><p>Atendimento completo para o seu pet em um só lugar.</p></div></li>
+        <li class="reveal"><div><h3>Laboratório próprio</h3><p>Resultados em minutos e testes rápidos na clínica.</p></div></li>
+        <li class="reveal"><div><h3>Serviço de emergência</h3><p>Aconteceu um imprevisto? Ligue para a clínica.</p><a class="link" href="tel:+556136246060">Ligar (61) 3624-6060</a></div></li>
+      </ol>
     </div>
   </div>
 </section>
 
 <section class="sec-offers" id="oferece">
-  <div class="wrap offers">
-  <h2 class="center reveal">O que a clínica oferece</h2>
-  <div class="tabs" role="tablist" aria-label="Serviços em destaque">
-    <button role="tab" id="t0" aria-controls="p0" aria-selected="true" type="button">Castração</button>
-    <button role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1" type="button">Exames de imagem</button>
-    <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1" type="button">Exames laboratoriais</button>
-    <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1" type="button">Cirurgias</button>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="tag">Exames e cirurgias</p>
+      <h2>O que a clínica <em>oferece</em></h2>
+      <p class="sec-p">Diagnóstico, laboratório e centro cirúrgico no mesmo endereço.</p>
+    </div>
+    <div class="offer-grid">
+      <article class="offer reveal">
+        <img src="assets/img/castracao.webp" alt="Veterinário cuidando de um dachshund" width="900" height="1350" loading="lazy">
+        <div class="offer-body">
+          <p class="pill">Tecnologia</p>
+          <h3>Castração</h3>
+          <p class="offer-sub">Bisturi ultrassônico</p>
+          <ul class="checks"><li>Castrações eletivas</li><li>Castrações terapêuticas</li><li>Tecnologia de bisturi ultrassônico</li></ul>
+          <a class="btn btn-full" href="#agendar" data-servico="Castração">Agendar castração</a>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <img src="assets/img/ultrassom.webp" alt="Veterinária realizando ultrassonografia em um cachorro" width="900" height="1350" loading="lazy">
+        <div class="offer-body">
+          <p class="pill">Diagnóstico</p>
+          <h3>Exames de imagem</h3>
+          <p class="offer-sub">Para entender o que o pet tem</p>
+          <ul class="checks"><li>Ultrassonografia e radiografia</li><li>Endoscopia</li><li>Ecocardiograma e eletrocardiograma</li></ul>
+          <a class="btn btn-full" href="#agendar" data-servico="Exame de imagem">Agendar exame</a>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <img src="assets/img/lab.webp" alt="Profissional analisando amostra ao microscópio" width="900" height="600" loading="lazy">
+        <div class="offer-body">
+          <p class="pill">Laboratório próprio</p>
+          <h3>Exames laboratoriais</h3>
+          <p class="offer-sub">Resultados em minutos</p>
+          <ul class="checks"><li>Laboratório na clínica</li><li>Testes rápidos</li><li>Sem precisar ir a outro endereço</li></ul>
+          <a class="btn btn-full" href="#agendar" data-servico="Exame laboratorial">Agendar exame</a>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <img src="assets/img/dente.webp" alt="Cachorro segurando uma escova de dentes na boca" width="660" height="399" loading="lazy">
+        <div class="offer-body">
+          <p class="pill">Centro cirúrgico</p>
+          <h3>Cirurgias</h3>
+          <p class="offer-sub">Da rotina à ortopedia</p>
+          <ul class="checks"><li>Cirurgia ortopédica</li><li>Dentista veterinário</li><li>Cirurgias em geral</li></ul>
+          <a class="btn btn-full" href="#agendar" data-servico="Cirurgia">Falar com a equipe</a>
+        </div>
+      </article>
+    </div>
   </div>
-  <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
-    <img src="assets/img/castracao.webp" alt="Veterinário cuidando de um dachshund" width="900" height="1350" loading="lazy">
-    <div><h3>Castração com bisturi ultrassônico</h3><p>Castrações eletivas e terapêuticas com tecnologia de bisturi ultrassônico.</p>
-      <ul class="checks"><li>Bisturi ultrassônico</li><li>Castrações eletivas</li><li>Castrações terapêuticas</li></ul>
-      <a class="btn" href="#agendar" data-servico="Castração">Quero agendar castração</a></div>
-  </div>
-  <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
-    <img src="assets/img/ultrassom.webp" alt="Veterinária realizando ultrassonografia em um cachorro" width="900" height="1350" loading="lazy">
-    <div><h3>Exames de imagem</h3><p>Diagnóstico por imagem para entender o que seu pet tem.</p>
-      <ul class="checks"><li>Ultrassonografia</li><li>Radiografia</li><li>Endoscopia</li><li>Ecocardiograma</li><li>Eletrocardiograma</li></ul>
-      <a class="btn" href="#agendar" data-servico="Exame de imagem">Agendar exame</a></div>
-  </div>
-  <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-    <img src="assets/img/lab.webp" alt="Profissional analisando amostra ao microscópio" width="900" height="600" loading="lazy">
-    <div><h3>Exames laboratoriais</h3><p>Temos laboratório próprio com resultados em minutos.</p>
-      <ul class="checks"><li>Laboratório próprio</li><li>Resultados em minutos</li><li>Testes rápidos</li></ul>
-      <a class="btn" href="#agendar" data-servico="Exame laboratorial">Agendar exame</a></div>
-  </div>
-  <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-    <img src="assets/img/dente.webp" alt="Cachorro segurando uma escova de dentes na boca" width="660" height="399" loading="lazy">
-    <div><h3>Cirurgias</h3><p>Do procedimento de rotina à ortopedia.</p>
-      <ul class="checks"><li>Castrações eletivas e terapêuticas</li><li>Cirurgia ortopédica</li><li>Dentista veterinário</li><li>Cirurgias em geral</li></ul>
-      <a class="btn" href="#agendar" data-servico="Cirurgia">Falar com a equipe</a></div>
-  </div>
-</div>
 </section>
 
 <section class="big" aria-label="Bichos &amp; Cia em destaque">
@@ -186,10 +200,11 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 </section>
 
 <section class="book" id="agendar">
-  <img class="book-bg" src="assets/img/gato.webp" alt="" width="1400" height="1075" loading="lazy">
+  <img class="book-bg" src="assets/img/gato.webp" alt="" width="1400" height="1075">
   <div class="wrap book-in">
     <div class="reveal">
-      <h2>Quero agendar um horário</h2>
+      <p class="tag tag-w">Agendamento</p>
+      <h2>Quero agendar <em>um horário</em></h2>
       <p>Consultas, vacinas, exames, cirurgias e castração. Conte quem é seu pet e a mensagem chega pronta no WhatsApp da clínica.</p>
       <ol class="steps"><li>Escolha o serviço</li><li>Diga o nome e quem é o seu pet</li><li>Envie: a equipe responde no WhatsApp</li></ol>
     </div>
@@ -220,11 +235,11 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 
 <section class="sec-pix" id="pix">
   <div class="wrap pix">
-  <div class="reveal">
-    <p class="eyebrow">Pagamento rápido</p>
-    <h2>Gere seu QR Code Pix</h2>
-    <p>Escolha o valor, aponte a câmera do app do banco e pague. O QR Code já vem com a quantia certa.</p>
-    <div class="chips amounts" role="group" aria-label="Valores sugeridos">
+    <div class="reveal">
+      <p class="tag">Pagamento rápido</p>
+      <h2>Gere seu <em>QR Code Pix</em></h2>
+      <p class="sec-p">Escolha o valor, aponte a câmera do app do banco e pague. O QR Code já vem com a quantia certa.</p>
+      <div class="chips amounts" role="group" aria-label="Valores sugeridos">
       <button type="button" data-v="50">R$ 50</button>
       <button type="button" data-v="100">R$ 100</button>
       <button type="button" data-v="150">R$ 150</button>
@@ -237,26 +252,31 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
       <small id="valor-err" class="err" hidden>Digite um valor maior que zero.</small>
     </div>
   </div>
-  <div class="pix-card reveal" aria-live="polite">
+    <div class="pix-card reveal" aria-live="polite">
     <canvas id="qr" width="600" height="600" role="img" aria-label="QR Code Pix"></canvas>
     <strong id="pix-total">R$ 100,00</strong>
     <span class="muted">Para Bichos &amp; Cia<br>Chave Pix: <span class="nb">(61) 99504-5476</span></span>
     <button class="btn btn-full" type="button" id="pix-copy">Copiar Pix copia e cola</button>
     <a class="link" id="pix-save" href="#" download="pix-bichos-e-cia.png">Baixar imagem do QR Code</a>
   </div>
-</div>
+  </div>
 </section>
 
 <section class="social" id="avaliar">
-  <img class="social-bg" src="assets/img/golden.webp" alt="" width="1800" height="1200" loading="lazy">
+  <img class="social-bg" src="assets/img/golden.webp" alt="" width="1800" height="1200">
   <div class="wrap social-in">
+    <div class="sec-head reveal">
+      <p class="tag tag-w">Quem cuida, recomenda</p>
+      <h2>Siga e <em>avalie</em> a clínica</h2>
+      <p class="sec-p">Sua avaliação ajuda outros tutores a encontrar a Bichos &amp; Cia.</p>
+    </div>
     <a class="sc sc-sol reveal" href="https://g.page/r/CUDDN-OIG2SUEBM/review" target="_blank" rel="noopener">
       <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
       <strong>Seu pet foi bem cuidado? Conte no Google</strong>
       <span class="go">Avaliar a clínica</span>
     </a>
-    <a class="sc sc-teal reveal" href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">
-      <img src="assets/img/dogcat.webp" alt="Cachorro e gato juntos" width="525" height="350" loading="lazy">
+    <a class="sc sc-ig reveal" href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">
+      <svg class="sc-ico" aria-hidden="true"><use href="#i-ig"/></svg>
       <strong>Acompanhe o dia a dia no Instagram</strong>
       <span class="go">@clinicavet_bichosecia</span>
     </a>
@@ -266,10 +286,10 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 <section class="faq-sec" id="duvidas">
   <div class="wrap faq-in">
     <div class="reveal">
-      <p class="eyebrow">Perguntas frequentes</p>
-      <h2>Tire suas dúvidas</h2>
-      <p>Não achou o que procurava? Fale com a equipe pelo WhatsApp.</p>
-      <a class="btn btn-teal" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e tenho uma dúvida."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
+      <p class="tag">Perguntas frequentes</p>
+      <h2>Tire suas <em>dúvidas</em></h2>
+      <p class="sec-p">Não achou o que procurava? Fale com a equipe pelo WhatsApp.</p>
+      <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e tenho uma dúvida."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a>
     </div>
     <div class="faq-list reveal">
       <details><summary>Vocês fazem castração?</summary><p>Sim. Castrações eletivas e terapêuticas com bisturi ultrassônico. Use o formulário de agendamento para mandar os dados do pet.</p></details>
@@ -284,33 +304,45 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 
 <section class="sec-local" id="local">
   <div class="wrap local">
-  <div class="reveal">
-    <h2>Venha nos visitar</h2>
-    <address>R. Aumerson M. São Pessoa, Quadra 116, Lote 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO<br>CEP 72871-072</address>
-    <div class="actions">
-      <a class="btn" href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener">Traçar rota</a>
-      <a class="btn btn-line" href="tel:+556136246060">(61) 3624-6060</a>
+    <div class="local-card reveal">
+      <p class="tag">Onde estamos</p>
+      <h2>Venha nos <em>visitar</em></h2>
+      <p class="local-addr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>R. Aumerson M. São Pessoa, Quadra 116, Lote 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO<br>CEP 72871-072</span></p>
+      <div class="local-acts">
+        <a class="btn" href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Traçar rota</a>
+        <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-line" href="tel:+556136246060"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(61) 3624-6060</a>
+      </div>
+      <p><a class="link" href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></p>
     </div>
-    <p><a class="link" href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></p>
+    <div class="map reveal">
+      <iframe title="Mapa com a localização da Clínica Veterinária Bichos e Cia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Veterin%C3%A1ria%20Bichos%20e%20Cia%2C%20Quadra%20116%20Lote%2004%2C%20Jardim%20C%C3%A9u%20Azul%2C%20Valpara%C3%ADso%20de%20Goi%C3%A1s%20-%20GO%2C%2072871-072&z=16&hl=pt-BR&output=embed"></iframe>
+    </div>
   </div>
-  <div class="map reveal">
-    <iframe title="Mapa com a localização da Clínica Veterinária Bichos e Cia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Veterin%C3%A1ria%20Bichos%20e%20Cia%2C%20Quadra%20116%20Lote%2004%2C%20Jardim%20C%C3%A9u%20Azul%2C%20Valpara%C3%ADso%20de%20Goi%C3%A1s%20-%20GO%2C%2072871-072&z=16&hl=pt-BR&output=embed"></iframe>
-  </div>
-</div>
 </section>
 </main>
 
 <footer class="foot">
-  <img src="assets/img/logo.webp" alt="Bichos &amp; Cia Clínica Veterinária" width="1020" height="1005" loading="lazy">
-  <div>
-    <p><strong>Clínica Veterinária Bichos &amp; Cia</strong><br>R. Aumerson M. São Pessoa, Qd 116, Lt 04, Jardim Céu Azul<br>Valparaíso de Goiás, GO</p>
-    <nav aria-label="Contatos">
-      <a href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="mailto:bichoseciaa@gmail.com">E-mail</a>
-      <a href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener">Como chegar</a>
-    </nav>
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="assets/img/logo.webp" alt="Bichos &amp; Cia Clínica Veterinária" width="1020" height="1005" loading="lazy">
+      <p>Clínica veterinária em Valparaíso de Goiás, do check-up à cirurgia.</p>
+      <a class="foot-ig" href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>@clinicavet_bichosecia</a>
+    </div>
+    <div>
+      <h3>Contato</h3>
+      <p><a href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica.">WhatsApp</a></p>
+      <p><a href="tel:+556136246060">(61) 3624-6060</a></p>
+      <p><a href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Endereço</h3>
+      <p>R. Aumerson M. São Pessoa, Qd 116, Lt 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO</p>
+      <p><a href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener">Como chegar</a></p>
+    </div>
   </div>
+  <p class="foot-ghost" aria-hidden="true">Bichos &amp; Cia</p>
+  <div class="wrap foot-base"><span>© 2026 Clínica Veterinária Bichos &amp; Cia</span><span>Valparaíso de Goiás, GO</span></div>
 </footer>
 
 
@@ -324,6 +356,6 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
 
 <script src="assets/js/qrcode.js"></script>
 <script src="assets/js/pix.js"></script>
-<script src="assets/js/main.js?v=4"></script>
+<script src="assets/js/main.js?v=5"></script>
 </body>
 </html>
