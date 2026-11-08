@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp">
-<link rel="stylesheet" href="assets/css/style.css?v=8">
+<link rel="stylesheet" href="assets/css/style.css?v=9">
 <script>
 // abertura com a logo em todo carregamento
 document.documentElement.classList.add('js', 'intro-on');
@@ -57,10 +57,10 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
   <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   <nav id="menu" class="menu" aria-label="Principal">
     <a href="#servicos">Serviços</a>
+    <a href="#local">Onde estamos</a>
     <a href="#oferece">Exames e cirurgias</a>
     <a href="#pix">Pagar com Pix</a>
     <a href="#duvidas">Dúvidas</a>
-    <a href="#local">Onde estamos</a>
     <a class="btn btn-sm btn-wa" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
   </nav>
 </header>
@@ -134,6 +134,25 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
         <li class="reveal"><div><h3>Laboratório próprio</h3><p>Resultados em minutos e testes rápidos na clínica.</p></div></li>
         <li class="reveal"><div><h3>Serviço de emergência</h3><p>Aconteceu um imprevisto? Ligue para a clínica.</p></div></li>
       </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec-local" id="local">
+  <div class="wrap local">
+    <div class="local-card reveal">
+      <p class="tag">Onde estamos</p>
+      <h2>Venha nos <em>visitar</em></h2>
+      <p class="local-addr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>R. Aumerson M. São Pessoa, Quadra 116, Lote 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO<br>CEP 72871-072</span></p>
+      <div class="local-acts">
+        <a class="btn" href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Traçar rota</a>
+        <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-line" href="tel:+556136246060"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(61) 3624-6060</a>
+      </div>
+      <p><a class="link" href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></p>
+    </div>
+    <div class="map reveal">
+      <iframe title="Mapa com a localização da Clínica Veterinária Bichos e Cia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Veterin%C3%A1ria%20Bichos%20e%20Cia%2C%20Quadra%20116%20Lote%2004%2C%20Jardim%20C%C3%A9u%20Azul%2C%20Valpara%C3%ADso%20de%20Goi%C3%A1s%20-%20GO%2C%2072871-072&z=16&hl=pt-BR&output=embed"></iframe>
     </div>
   </div>
 </section>
@@ -302,30 +321,12 @@ setTimeout(() => document.documentElement.classList.remove('intro-on'), 1400);
   </div>
 </section>
 
-<section class="sec-local" id="local">
-  <div class="wrap local">
-    <div class="local-card reveal">
-      <p class="tag">Onde estamos</p>
-      <h2>Venha nos <em>visitar</em></h2>
-      <p class="local-addr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>R. Aumerson M. São Pessoa, Quadra 116, Lote 04<br>Jardim Céu Azul, Valparaíso de Goiás, GO<br>CEP 72871-072</span></p>
-      <div class="local-acts">
-        <a class="btn" href="https://maps.app.goo.gl/55ENMLAmKyvj6iJb6" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Traçar rota</a>
-        <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=556136246060" target="_blank" rel="noopener" data-wa="Olá! Vim pelo site e gostaria de falar com a clínica."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
-        <a class="btn btn-line" href="tel:+556136246060"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(61) 3624-6060</a>
-      </div>
-      <p><a class="link" href="mailto:bichoseciaa@gmail.com">bichoseciaa@gmail.com</a></p>
-    </div>
-    <div class="map reveal">
-      <iframe title="Mapa com a localização da Clínica Veterinária Bichos e Cia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=Cl%C3%ADnica%20Veterin%C3%A1ria%20Bichos%20e%20Cia%2C%20Quadra%20116%20Lote%2004%2C%20Jardim%20C%C3%A9u%20Azul%2C%20Valpara%C3%ADso%20de%20Goi%C3%A1s%20-%20GO%2C%2072871-072&z=16&hl=pt-BR&output=embed"></iframe>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer class="foot">
   <div class="wrap foot-in">
     <div class="foot-brand">
-      <img src="assets/img/logo.webp" alt="Bichos &amp; Cia Clínica Veterinária" width="1020" height="1005" loading="lazy">
+      <p class="foot-name">Bichos &amp; Cia</p>
       <p>Clínica veterinária em Valparaíso de Goiás, do check-up à cirurgia.</p>
       <a class="foot-ig" href="https://www.instagram.com/clinicavet_bichosecia" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>@clinicavet_bichosecia</a>
     </div>
