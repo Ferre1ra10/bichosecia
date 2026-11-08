@@ -350,7 +350,6 @@ h2 em{font-style:normal;color:var(--roxo)}
 .num-list li:first-child{border-top:2px solid var(--lilas)}
 .num-list li::before{content:counter(n,decimal-leading-zero);font:800 2.1rem/1 var(--display);color:var(--teal-esc)}
 .num-list p{color:var(--texto2);margin-top:4px}
-.num-list .link{display:inline-block;margin-top:8px}
 @media (hover:hover) and (pointer:fine){.num-list li:hover{translate:8px 0}}
 
 /* ===== exames e cirurgias: cards lado a lado (como Planos) ===== */
